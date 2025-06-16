@@ -2,6 +2,7 @@ function App() { //root
 
     return(
       <>
+        <Header/>
       </>      
     );
 }

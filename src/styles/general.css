@@ -1,0 +1,28 @@
+:root {
+  --white: #ffffff;
+  --black: #424242;
+  --gray: #5D5C5C;
+  --light-gray: #939393;
+  --light-lilac: #CBD0EF;
+  --darker-lilac: #A1A8D5;
+  --red: #E5C6C6;
+  --yellow: #E3E5C6;
+  --green: #C6E5C8;
+
+  color: var(--black);
+  background-color: var(--white);
+
+}
+
+.dark{
+  --white: #2A2A2A;
+  --black: #ffffff;
+  --gray: #2A2A2A;
+  --light-gray: #939393;
+
+}
+
+body{
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0;
