@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
 :root {
   --white: #ffffff;
   --black: #424242;
@@ -11,6 +13,11 @@
 
   color: var(--black);
   background-color: var(--white);
+
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 
 }
 
@@ -26,3 +33,27 @@ body{
     background-color: var(--white);
     color: var(--black);
     margin: 0;
+}
+
+button{
+  font-family: inherit;
+  color: var(--black);
+  font-size: 20px;
+  background-color: var(--white);
+
+}
+
+.border-btn{
+    width: 151px;
+    max-width: 151px;
+    padding: 12px 0px;
+    border: 1px solid var(--black);
+    border-radius: 14px;
+
+}
+
+a:link,
+a:visited{
+    color: var(--darker-lilac);
+    text-decoration: none;
+}

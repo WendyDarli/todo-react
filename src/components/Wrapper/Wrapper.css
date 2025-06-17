@@ -1,0 +1,26 @@
+#wrapper{
+    margin: 15px 0px;
+}
+
+.lilac-btn{
+    background-color: var(--light-lilac);
+    border: none;
+    border-radius: 14px;
+    padding: 0px 102px;
+    font-size: 24px;
+    font-style: bold;
+    width: 312px;
+}
+
+#top-wrapper{
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#bottom-wrapper{
+    width: 312px;
+    display: flex;
+    justify-content: space-between;
+}
