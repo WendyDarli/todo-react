@@ -55,6 +55,11 @@ button{
   width: 100%;
 }
 
+.light-border{
+  padding: 0px 15px;
+  border: 1px solid var(--black);
+  border-radius: 14px;
+  width: 100%;
 }
 
 a:link,

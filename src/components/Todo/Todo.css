@@ -1,0 +1,23 @@
+.todo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.todo-name{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.todo-description{
+    color: var(--gray);
+}
+
+.todo-status{
+    color: var(--blackInContainer);
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: var(--green);
+    border-radius: 5px;
+}
