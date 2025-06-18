@@ -22,3 +22,8 @@ VITE vX.X.X  ready in xxx ms
 Local: http://localhost:5173/
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+
+### Requiriments:
+- Node.JS Installed.
+- A code editor (like VS Code)
