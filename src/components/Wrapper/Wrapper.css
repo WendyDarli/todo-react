@@ -2,25 +2,31 @@
     margin: 15px 0px;
 }
 
-.lilac-btn{
+.lilac-container{
     background-color: var(--light-lilac);
+    color: var(--blackInContainer);
+    text-align: center;
     border: none;
+    padding: 12px 0px;
     border-radius: 14px;
-    padding: 0px 102px;
-    font-size: 24px;
-    font-style: bold;
     width: 312px;
+    font-size: 24px;
+    
+}
+
+.lilac-container > p {
+    margin: 0;
 }
 
 #top-wrapper{
     margin: 15px 0px;
     display: flex;
     justify-content: space-between;
-
 }
 
 #bottom-wrapper{
     width: 312px;
     display: flex;
     justify-content: space-between;
+    gap: 9px;
 }

@@ -3,6 +3,7 @@
 :root {
   --white: #ffffff;
   --black: #424242;
+  --blackInContainer: #424242;
   --gray: #5D5C5C;
   --light-gray: #939393;
   --light-lilac: #CBD0EF;
@@ -24,7 +25,6 @@
 .dark{
   --white: #2A2A2A;
   --black: #ffffff;
-  --gray: #2A2A2A;
   --light-gray: #939393;
 
 }
@@ -43,12 +43,17 @@ button{
 
 }
 
-.border-btn{
-    width: 151px;
-    max-width: 151px;
-    padding: 12px 0px;
-    border: 1px solid var(--black);
-    border-radius: 14px;
+.short-btn{
+  width: 151px;
+  max-width: 151px;
+}
+
+.border{
+  padding: 12px 0px;
+  border: 1px solid var(--black);
+  border-radius: 14px;
+  width: 100%;
+}
 
 }
 
@@ -56,4 +61,8 @@ a:link,
 a:visited{
     color: var(--darker-lilac);
     text-decoration: none;
+}
+#centralizer {
+    width: 67%;
+    margin: auto;
 }
