@@ -1,0 +1,78 @@
+#modal-container{
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 363px;
+    gap: 12px;
+}
+
+#modal-container > p {
+    text-align: center;
+}
+
+.selects-container{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+input{
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    
+}
+
+textarea{
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    height: 75px;
+}
+
+select{
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-family: inherit;
+    color: var(--light-gray);
+    text-align: center;
+    width: 116px;
+    
+}
+
+input[type="date"]{
+    width: 119px;
+    color: var(--light-gray);
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border: 1px solid var(--light-gray);
+}
+
+.form-bttn{
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+.lilac-bttn{
+    background-color: var(--light-lilac);
+}
+.lilac-bttn:hover{
+    background-color: var(--darker-lilac);
+}
+
+/* hide date icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
