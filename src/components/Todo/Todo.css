@@ -3,21 +3,26 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 14px 20px;
 }
 
 .todo-name{
-    font-size: 20px;
-    margin-bottom: 0;
+    font-size: 18px;
+    margin: 4px 0px;
 }
 
 .todo-description{
     color: var(--gray);
+    font-size: 15px;
+    margin: 0;
 }
 
 .todo-status{
     color: var(--blackInContainer);
-    padding: 10px 20px;
+    padding: 7px 15px;
     font-size: 20px;
     background-color: var(--green);
     border-radius: 5px;
+    margin: 0;
 }
