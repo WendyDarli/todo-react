@@ -1,0 +1,15 @@
+#kanban-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kanban-column{
+    width: 315px;
+}
+
+.kanban-header{
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}

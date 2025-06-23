@@ -76,9 +76,23 @@ a:visited{
 #centralizer {
     width: 57%;
     margin: auto;
+  max-width: 970px;
+  margin: auto;
 }
 
 .dateP{
   text-align: center;
   color: var(--gray)
 }
+.red{
+  background-color: var(--red);
+}
+
+.yellow{
+  background-color: var(--yellow);
+}
+
+.green{
+  background-color: var(--green);
+}
+
