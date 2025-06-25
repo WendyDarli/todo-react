@@ -11,8 +11,12 @@ function Todo(props){
                     <p className='todo-name'>{task.todoName}</p>
                     <p className='todo-description'>{task.description}</p>
                 </div>
-                <div>
-                    <p className='todo-status'>{task.status}</p>
+                <div >
+                    <p className={`todo-status ${ 
+                        task.status === 'To-Do' ? 'red' : 
+                        task.status === 'In-Progress' ? 'yellow' : 
+                        'green'
+                    }`}>{task.status}</p>
                 </div>
 
             </div>
