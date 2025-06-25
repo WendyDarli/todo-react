@@ -1,23 +1,28 @@
 import './TodoCard.css'
 import '../Todo/Todo.css'
 
-function TodoCard(){
+function TodoCard(props){
 
     return(
-        <div className='todo-card-container'>
-            <div className='todo-info'>
-                <p className='todo-name'>Task todo</p>
-                <p className='todo-description'>Description</p>                
-            </div>
+        <>
+        {props.userTasks.map((task) => (
+            
+            <div className='todo-card-container' key={task.id}>
+                <div className='todo-info'>
+                    <p className='todo-name'>{task.todoName}</p>
+                    <p className='todo-description'>{task.description}</p>                
+                </div>
 
-            <div className='statusTag'>
-                <p>Medium</p>
+                <div className={`statusTag ${task.status === 'Done' ? 'green' : task.status === 'In-Progress' ? 'yellow' : 'red'}`}>
+                    <p>{task.status}</p>
+                </div>
+                <div className='dateTag'>
+                    <p>{task.dueDate}</p>
+                </div>
             </div>
-            <div className='dateTag'>
-                <p>Nov 12</p>
-            </div>
-        </div>
+        ))}
+        </> 
     )
 };
 
-export default TodoCard
+export default TodoCard;
