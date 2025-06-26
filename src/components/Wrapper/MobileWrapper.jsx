@@ -9,7 +9,7 @@ function MobileWrapper(){
                 
             </div>
 
-            <div id='bottom-wrapper'>
+            <div id='mobile-bottom-wrapper'>
                 <button className='border'>Filter</button>
                 <button className='border short-btn'>New +</button> 
             </div>

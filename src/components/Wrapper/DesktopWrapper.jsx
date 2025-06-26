@@ -1,6 +1,6 @@
 import './Wrapper.css';
 
-function Wrapper(){
+function DesktopWrapper(){
     return(
         <div id='wrapper'>
             <div id='top-wrapper'>
@@ -18,4 +18,4 @@ function Wrapper(){
     )
 }
 
-export default Wrapper
+export default DesktopWrapper

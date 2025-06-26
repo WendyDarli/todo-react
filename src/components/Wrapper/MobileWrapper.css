@@ -1,6 +1,6 @@
-#bottom-wrapper{
+#mobile-bottom-wrapper{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    gap: 9px;
 }

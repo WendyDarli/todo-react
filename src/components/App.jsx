@@ -4,6 +4,8 @@ import Wrapper from './Wrapper/Wrapper.jsx'
 //import Modal from './Create-Delete-Modal/Modal.jsx'
 import Todo from './Todo/Todo.jsx'
 import { userTasks } from '../data/userTasks.js'
+import { useMediaQuery } from 'react-responsive';
+
 function App() { //root
 
     return(
@@ -22,6 +24,7 @@ function App() { //root
       <Header/>
       <div id='centralizer'>
         <MobileWrapper/>
+        {useMediaQuery({ maxWidth: 800 }) ? <MobileWrapper/> : <DesktopWrapper/>}
         <Todo userTasks={userTasks}/>
       </div>
     </>
