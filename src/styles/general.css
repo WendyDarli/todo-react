@@ -70,12 +70,10 @@ button:hover{
 
 a:link,
 a:visited{
-    color: var(--darker-lilac);
-    text-decoration: none;
+  color: var(--darker-lilac);
+  text-decoration: none;
 }
 #centralizer {
-    width: 57%;
-    margin: auto;
   max-width: 970px;
   margin: auto;
 }
@@ -84,6 +82,7 @@ a:visited{
   text-align: center;
   color: var(--gray)
 }
+
 .red{
   background-color: var(--red);
 }
@@ -95,4 +94,27 @@ a:visited{
 .green{
   background-color: var(--green);
 }
+
+@media (max-width: 1200px){
+    #centralizer{
+    max-width: clamp(90%, 52vw, 80%);
+    margin: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  #centralizer{
+    max-width: clamp(90%, 52vw, 80%);
+    margin: auto;
+  }
+
+
+  .lilac-container{
+    min-width: 100%;
+  }
+
+  
+}
+
+
 
