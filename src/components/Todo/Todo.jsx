@@ -1,12 +1,12 @@
 import './Todo.css'
 
-function Todo(props){
+function Todo({ userTasks, openModal }){
     return(
         <>
         {/*TODO: add conditional rendering for status background color*/}
         {/*TODO: add date p that groups todos inside this due date*/}
-        {props.userTasks.map((task) => (
-            <div className='todo-container light-border' key={task.id}>
+        {userTasks.map((task) => (
+            <div className='todo-container light-border' key={task.id} onClick={() => {openModal('edit', task.id)}}>
                 <div>
                     <p className='todo-name'>{task.todoName}</p>
                     <p className='todo-description'>{task.description}</p>
