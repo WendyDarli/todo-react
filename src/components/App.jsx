@@ -3,12 +3,13 @@ import MobileWrapper from './Wrapper/MobileWrapper.jsx';
 import DesktopWrapper from './Wrapper/DesktopWrapper.jsx';
 import Modal from './Create-edit-Modal/Modal.jsx';
 import Todo from './Todo/Todo.jsx';
-import { userTasks } from '../data/userTasks.js';
+import { useUserTasks } from '../hooks/useUserTasks.js';
 
 import { useMediaQuery } from 'react-responsive';
 import { useModalManager } from '../hooks/useModalManager.js';
 
 function App() { //root
+  const { userTasks, editOrCreateTask, deleteTask } = useUserTasks();
   const {isOpen, modalMode, taskId, openModal, closeModal } = useModalManager();
   const selectedTask = userTasks.find(task => task.id === taskId);
   const isMobile = useMediaQuery({ maxWidth: 800 });
