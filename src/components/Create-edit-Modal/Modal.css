@@ -34,6 +34,12 @@
     gap: 6px;
 }
 
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
 input{
     border: 1px solid var(--light-gray);
     border-radius: 5px;

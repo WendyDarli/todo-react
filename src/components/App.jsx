@@ -26,7 +26,9 @@ function App() { //root
         {isOpen && <Modal 
           mode={modalMode} 
           task={selectedTask} 
-          closeModal={closeModal}/>}
+          closeModal={closeModal}
+          editOrCreateTask={editOrCreateTask}
+          deleteTask={deleteTask}/>}
       </div>
     </>
   );

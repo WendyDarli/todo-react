@@ -1,8 +1,24 @@
 import { useState } from "react";
-import { modalConfigs } from '../components/Create-edit-Modal/modalConfigs.js';
+
+// Modal configs are only used in this hook
+const modalConfigs = {
+    edit: {
+        title: 'Edit Task',
+        button1: 'Delete',
+        button2: 'Save'
+    },
+    create: {
+        title: 'Create Task',
+        button1: 'Cancel',
+        button2: 'Create'
+    }
+};
+
+
+
 // This hook manages the modal state, including whether it is open, the mode of the modal, and the task ID if applicable
 export function useModalManager(){
-    const [ModalState, setModalState] = useState({
+    const [modalState, setModalState] = useState({
         isOpen: false,
         modalMode: 'create',
         taskId: null,
@@ -25,5 +41,5 @@ export function useModalManager(){
         });
     }
 
-    return { ...ModalState, openModal, closeModal };
+    return { ...modalState, openModal, closeModal };
 }
