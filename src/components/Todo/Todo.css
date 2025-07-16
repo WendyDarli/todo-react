@@ -26,3 +26,9 @@
     border-radius: 5px;
     margin: 0;
 }
+
+.p-date{
+    text-align: center;
+    margin: 25px 0px 10px 0px;
+    color: var(--gray);
+}
