@@ -42,6 +42,8 @@
 
 input{
     border: 1px solid var(--light-gray);
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 5px;
     padding: 12px;
     width: 100%;
@@ -52,6 +54,8 @@ input{
 
 textarea{
     border: 1px solid var(--light-gray);
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 5px;
     padding: 10px;
     font-family: inherit;
@@ -67,6 +71,7 @@ select{
     color: var(--light-gray);
     text-align: center;
     width: 116px;
+    background-color: var(--white);
     
 }
 
@@ -87,9 +92,11 @@ input:focus, textarea:focus, select:focus{
 
 .lilac-bttn{
     background-color: var(--light-lilac);
+    color: var(--white);
 }
 .lilac-bttn:hover{
     background-color: var(--darker-lilac);
+    color: var(--white);
 }
 
 /* hide date icon */

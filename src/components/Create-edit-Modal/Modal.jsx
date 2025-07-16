@@ -36,7 +36,7 @@ function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
                 <p>{mode.title}</p>
                 <form onSubmit={handleSubmit} className='form-container'>
                     <input aria-label='type task' name='todoName' type='text' placeholder='Task' required onChange={handleInputChange} value={formData.todoName}/>
-                    <textarea aria-label='description' name='description' placeholder='Description...' required onChange={handleInputChange} value={formData.description}></textarea>
+                    <textarea aria-label='description' name='description' placeholder='Description...' onChange={handleInputChange} value={formData.description}></textarea>
 
                     <div className='selects-container'>
                         
