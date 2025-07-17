@@ -1,6 +1,7 @@
 import React from 'react';
 import './Todo.css'
-import { format, isToday, isTomorrow, isYesterday, parseISO } from 'date-fns';
+import { formatDate } from '../../scripts/formatDate';
+
 
 function Todo({ userTasks, openModal }){
 
@@ -18,17 +19,6 @@ function Todo({ userTasks, openModal }){
         }, {})
     ).sort(([a], [b]) => new Date(b) - new Date(a))
     
-
-    //format date to display in the UI
-    function formatDate(dateString) {
-        const date = parseISO(dateString); 
-
-        if (isToday(date)) return 'Today';
-        if (isTomorrow(date)) return 'Tomorrow';
-        if (isYesterday(date)) return 'Yesterday';
-
-        return format(date, 'MMM d');
-    }
 
 
     return(
