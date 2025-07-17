@@ -5,8 +5,7 @@ import { formatDate } from '../../scripts/formatDate';
 
 function Todo({ userTasks, openModal }){
 
-    //groups tasks by date in desc order
-    const groupedTasks = Object.entries(
+    const groupTasksByDate = Object.entries(
         userTasks.reduce((acc, task) => {
             const date = task.dueDate;
 
@@ -17,13 +16,13 @@ function Todo({ userTasks, openModal }){
             acc[date].push(task);
             return acc;
         }, {})
-    ).sort(([a], [b]) => new Date(b) - new Date(a))
+    ).sort(([a], [b]) => new Date(b) - new Date(a)); //desc order
     
 
 
     return(
         <>
-            {groupedTasks.map(([dueDate, tasks]) => (
+            {groupTasksByDate.map(([dueDate, tasks]) => (
                 <React.Fragment key={dueDate}>
                     <p className='p-date'>{formatDate(dueDate)}</p> 
                     {tasks.map((task) => (
