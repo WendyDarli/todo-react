@@ -10,6 +10,8 @@ import KanbanView from './KanbanView/KanbanView.jsx';
 import { useUserTasks } from '../hooks/useUserTasks.js';
 import { useMediaQuery } from 'react-responsive';
 import { useModalManager } from '../hooks/useModalManager.js';
+import { useToggleView } from '../hooks/useToggleView.js';
+
 
 function App() { //root
   const { userTasks, editOrCreateTask, deleteTask } = useUserTasks();
@@ -24,9 +26,9 @@ function App() { //root
       <Header/>
       <div id='centralizer'>
         {isMobile 
-          ? <MobileWrapper/> 
-          : <DesktopWrapper openModal={() => openModal('create')}/>}
-        <Todo userTasks={userTasks} openModal={openModal}/>
+          ? <MobileWrapper openModal={() => openModal('create')}/> 
+          : <DesktopWrapper openModal={() => openModal('create')} toggleView={toggleView}/>}
+
         
         {view === 'todo' && <Todo userTasks={userTasks} openModal={openModal}/>}
         {view === 'kanban' && <KanbanView openModal={openModal} userTasks={userTasks}/>}

@@ -1,7 +1,7 @@
 import './Wrapper.css';
 import './MobileWrapper.css';
 
-function MobileWrapper(){
+function MobileWrapper({ openModal }){
     return(
         <div id='wrapper'>
             <div id='top-wrapper'>
@@ -11,7 +11,7 @@ function MobileWrapper(){
 
             <div id='mobile-bottom-wrapper'>
                 <button className='border'>Filter</button>
-                <button className='border short-btn'>New +</button> 
+                <button className='border short-btn' onClick={openModal}>New +</button> 
             </div>
 
         </div>

@@ -1,6 +1,5 @@
 import './Wrapper.css';
-
-function DesktopWrapper({ openModal }){
+function DesktopWrapper({ openModal, toggleView }){
 
     return(
         <div id='wrapper'>
@@ -11,7 +10,7 @@ function DesktopWrapper({ openModal }){
 
             <div id='bottom-wrapper'>
                 <button className='border'>Filter</button>
-                <button className='border'>Kanban View</button> 
+                <button className='border' onClick={toggleView}>Kanban View</button> 
             </div>
 
         </div>
