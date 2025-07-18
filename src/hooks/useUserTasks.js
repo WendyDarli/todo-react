@@ -1,15 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-//TODO: refactor for localStorage
-let userTasksDemo = [
-    {id: 1, todoName: 'Study React', description: 'Complete the props lesson', dueDate: '2025-06-07', status: 'In-Progress', priority: 'High'},
-    {id: 2, todoName: 'Drink Water', description: '', dueDate: '2025-07-05', status: 'To-Do', priority: 'Low'},
-];
-
-
+//This hook manipulates the user tasks array, it uses useEffect() to synchronize with localStorage and manipulates the array by creating/editing and deleting tasks
 export function useUserTasks() {
-    const [userTasks, setUserTasks] = useState(userTasksDemo);
-    
+    const [userTasks, setUserTasks] = useState(()=> {
+        const storedData = localStorage.getItem('userData');
+        return storedData ? JSON.parse(storedData) : [
+            {id: 1, todoName: 'Click in a task to edit!', description: 'Tutorial', dueDate: '2025-06-07', status: 'In-Progress', priority: 'High'},
+        ];
+    });
+
+
+    useEffect(() => {
+        localStorage.setItem('userData', JSON.stringify(userTasks));
+    }, [userTasks])
+
     function generateId(){
         return crypto.randomUUID();
     };
