@@ -11,23 +11,35 @@ import { useUserTasks } from '../hooks/useUserTasks.js';
 import { useMediaQuery } from 'react-responsive';
 import { useModalManager } from '../hooks/useModalManager.js';
 import { useToggleView } from '../hooks/useToggleView.js';
+import { useEffect, useRef } from 'react';
+
 
 
 function App() { //root
   const { userTasks, editOrCreateTask, deleteTask } = useUserTasks();
   const { isOpen, modalMode, taskId, openModal, closeModal } = useModalManager();
-  const { view, toggleView } = useToggleView();
+  const { view, setView, toggleView } = useToggleView();
   const selectedTask = userTasks.find(task => task.id === taskId);
   const isMobile = useMediaQuery({ maxWidth: 800 });
+  const previousView = useRef(view);
 
-  
+  //automaticly swich to 'todo' view on mobile and restore previous view on desktop
+  useEffect(()=>{
+    if(isMobile){
+      previousView.current = view;
+      setView('todo');
+    } else {
+      setView(previousView.current);
+    }
+  }, [isMobile]);
+
   return(
     <>
       <Header/>
       <div id='centralizer'>
         {isMobile 
           ? <MobileWrapper openModal={() => openModal('create')}/> 
-          : <DesktopWrapper openModal={() => openModal('create')} toggleView={toggleView}/>}
+          : <DesktopWrapper openModal={() => openModal('create')} toggleView={toggleView} view={view}/>}
 
         
         {view === 'todo' && <Todo userTasks={userTasks} openModal={openModal}/>}

@@ -8,5 +8,5 @@ export function useToggleView(){
         setView(prevState => (prevState === 'todo' ? 'kanban' : 'todo'));
     }
 
-    return { view, toggleView };
+    return { view, setView, toggleView };
 }
