@@ -37,7 +37,7 @@ export function useUserTasks() {
         }
     }
 
-    return { userTasks, editOrCreateTask, deleteTask };
+    return { userTasks, setUserTasks, editOrCreateTask, deleteTask };
 };
 
 

@@ -14,11 +14,12 @@ import { useToggleView } from '../hooks/useToggleView.js';
 import { useEffect, useRef } from 'react';
 
 
-
 function App() { //root
-  const { userTasks, editOrCreateTask, deleteTask } = useUserTasks();
+  const { userTasks, setUserTasks, editOrCreateTask, deleteTask } = useUserTasks();
   const { isOpen, modalMode, taskId, openModal, closeModal } = useModalManager();
   const { view, setView, toggleView } = useToggleView();
+
+
   const selectedTask = userTasks.find(task => task.id === taskId);
   const isMobile = useMediaQuery({ maxWidth: 800 });
   const previousView = useRef(view);
@@ -43,7 +44,7 @@ function App() { //root
 
         
         {view === 'todo' && <Todo userTasks={userTasks} openModal={openModal}/>}
-        {view === 'kanban' && <KanbanView openModal={openModal} userTasks={userTasks}/>}
+        {view === 'kanban' && <KanbanView openModal={openModal} userTasks={userTasks} setUserTasks={setUserTasks}/>}
 
         {isOpen && <Modal 
           mode={modalMode} 

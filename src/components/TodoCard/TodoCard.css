@@ -5,6 +5,7 @@
     padding: 15px 20px 20px 20px;
     margin-bottom: 16px;
     cursor: pointer;
+    background-color: var(--white);
 }
 
 .todo-info{
@@ -20,8 +21,10 @@
 .statusTag > p, .dateTag > p{
     text-align: center;
     margin: 0;
+    color: var(--blackInContainer);
 }
 
 .dateTag{
     background-color: var(--light-lilac);
+    color: var(--blackInContainer);
 }
