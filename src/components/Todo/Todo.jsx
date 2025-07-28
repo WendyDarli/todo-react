@@ -1,12 +1,12 @@
 import React from 'react';
 import './Todo.css'
 import { formatDate } from '../../scripts/formatDate';
+import filteredTasks from '../../scripts/filterTasks';
 
-
-function Todo({ userTasks, openModal }){
+function Todo({ userTasks, openModal, priority, status }){
 
     const groupTasksByDate = Object.entries(
-        userTasks.reduce((acc, task) => {
+        filteredTasks(userTasks, priority, status).reduce((acc, task) => {
             const date = task.dueDate;
 
             if(!acc[date]){
@@ -18,8 +18,6 @@ function Todo({ userTasks, openModal }){
         }, {})
     ).sort(([a], [b]) => new Date(b) - new Date(a)); //desc order
     
-
-
     return(
         <>
             {groupTasksByDate.map(([dueDate, tasks]) => (

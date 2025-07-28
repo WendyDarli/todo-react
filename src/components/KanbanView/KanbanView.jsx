@@ -1,8 +1,7 @@
 import './KanbanView.css';
 import TodoCard from '../TodoCard/TodoCard';
 import { DndContext, useDroppable, PointerSensor, useSensor, useSensors  } from '@dnd-kit/core';
-
-
+import filteredTasks from '../../scripts/filterTasks';
 function KanbanColumn({ id, colorClass, title, tasks, openModal }) {
   const { setNodeRef } = useDroppable({ id }); 
 
@@ -14,7 +13,7 @@ function KanbanColumn({ id, colorClass, title, tasks, openModal }) {
   );
 }
 
-function KanbanView({ userTasks, openModal, setUserTasks }) {
+function KanbanView({ userTasks, openModal, setUserTasks, priority, status }) {
 
   //allow user to click or drag by setting a delay that defines the event
   const sensors = useSensors(
@@ -40,8 +39,8 @@ function KanbanView({ userTasks, openModal, setUserTasks }) {
           );
       };
   }
-  
-  const groupTasksByStatus = (userTasks ?? []).reduce((acc, task) => {
+
+  const groupTasksByStatus = (filteredTasks(userTasks, priority, status) ?? []).reduce((acc, task) => {
     const status = task.status;
     if (!acc[status]) acc[status] = [];
     acc[status].push(task);

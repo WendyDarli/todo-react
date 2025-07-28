@@ -1,0 +1,31 @@
+.filterRow{
+    display: flex;
+    align-items: center;
+}
+
+.filterTag{
+    color: var(--blackInContainer);
+    border: 1px solid #ffffff00;
+    font-size: 14px;
+    padding: 0px 10px;
+    margin: 0px 4px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.filterTag:hover{
+    border: 1px solid var(--black);
+}
+
+.filterRow > p{
+    margin: 6px;
+}
+
+.filterRow > input[type='date']{
+    padding: 3px 10px
+}
+
+.selected{
+    border: 1px solid var(--black);
+    background-color: #ffffffbd;
+}

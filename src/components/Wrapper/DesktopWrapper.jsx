@@ -1,5 +1,5 @@
 import './Wrapper.css';
-function DesktopWrapper({ openModal, toggleView, view }){
+function DesktopWrapper({ openModal, toggleView, view, setIsFiltersOpen }){
 
     return(
         <div id='wrapper'>
@@ -9,7 +9,7 @@ function DesktopWrapper({ openModal, toggleView, view }){
             </div>
 
             <div id='bottom-wrapper'>
-                <button className='border'>Filter</button>
+                <button className='border' onClick={() => setIsFiltersOpen(prev => !prev)}>Filter</button>
                 <button className='border' onClick={toggleView}>{view ==='todo' ? 'Kanban View' : 'Todo View'}</button> 
             </div>
 
