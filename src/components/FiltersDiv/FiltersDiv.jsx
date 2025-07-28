@@ -27,12 +27,6 @@ function FiltersDiv({ isFiltersOpen, setPriority, setStatus, priority, status })
                 <button className={`filterTag yellow ${status === 'In-Progress' ? 'selected' : ''}`}  onClick={()=> setStatus('In-Progress')}>In Progress</button>
                 <button className={`filterTag red ${status === 'To-Do' ? 'selected' : ''}`} onClick={()=> setStatus('To-Do')}> To-Do</button>
             </div>
-            <div className='filterRow'>
-                <p>Date: </p>
-                <input type='date' onClick={()=> setDate(e.target.value)}/>
-                <button className='filterTag selected' onClick={()=> setDate(null)}>x</button>
-
-            </div>
         </div>
         </motion.div>
       )}
