@@ -1,7 +1,7 @@
 import React from 'react';
 import './Todo.css'
-import { formatDate } from '../../scripts/formatDate';
-import filteredTasks from '../../scripts/filterTasks';
+import { formatDate } from '../../utils/formatDate';
+import filteredTasks from '../../utils/filterTasks';
 
 function Todo({ userTasks, openModal, priority, status }){
 

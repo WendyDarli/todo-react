@@ -1,5 +1,5 @@
 import './Wrapper.css';
-import loadDummyData from '../../scripts/loadDummyData';
+import loadDummyData from '../../utils/loadDummyData';
 
 function DesktopWrapper({ openModal, toggleView, view, setIsFiltersOpen }){
 

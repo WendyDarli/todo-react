@@ -1,6 +1,6 @@
 import './TodoCard.css';
 import '../Todo/Todo.css';
-import { formatDate } from '../../scripts/formatDate';
+import { formatDate } from '../../utils/formatDate';
 import { useDraggable } from '@dnd-kit/core';
 
 

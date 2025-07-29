@@ -1,6 +1,6 @@
 import './Wrapper.css';
 import './MobileWrapper.css';
-import loadDummyData from '../../scripts/loadDummyData';
+import loadDummyData from '../../utils/loadDummyData';
 
 function MobileWrapper({ openModal, setIsFiltersOpen }){
     return(

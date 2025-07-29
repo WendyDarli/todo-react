@@ -1,7 +1,7 @@
 import './KanbanView.css';
 import TodoCard from '../TodoCard/TodoCard';
 import { DndContext, useDroppable, PointerSensor, useSensor, useSensors  } from '@dnd-kit/core';
-import filteredTasks from '../../scripts/filterTasks';
+import filteredTasks from '../../utils/filterTasks';
 function KanbanColumn({ id, colorClass, title, tasks, openModal }) {
   const { setNodeRef } = useDroppable({ id }); 
 
