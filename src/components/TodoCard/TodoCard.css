@@ -6,19 +6,20 @@
     margin-bottom: 16px;
     cursor: pointer;
     background-color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .todo-info{
     margin-bottom: 40px;
 }
 
-.statusTag, .dateTag{
+.priorityTag, .dateTag{
     border-radius: 5px;
     padding: 3px 10px;
     margin-bottom: 8px;
 }
 
-.statusTag > p, .dateTag > p{
+.priorityTag > p, .dateTag > p{
     text-align: center;
     margin: 0;
     color: var(--blackInContainer);

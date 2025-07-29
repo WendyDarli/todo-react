@@ -31,7 +31,11 @@ function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
     }
 
     return(
-        <div id='modal-wrapper'>
+        <div id='modal-wrapper' onClick={(e) => {
+            if(!e.target.closest('#modal-container')){
+                closeModal();
+            }
+        }}>
             <div id='modal-container'>
                 <p>{mode.title}</p>
                 <form onSubmit={handleSubmit} className='form-container'>
@@ -54,7 +58,7 @@ function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
                             <option value='Low'>Low</option>
                         </select>
                         
-                            <input aria-label='date' name='dueDate' type='date' onChange={handleInputChange} required value={formData.dueDate}/>                  
+                            <input aria-label='date' name='dueDate' type='date'min='2023-01-01' max='2030-01-01' onChange={handleInputChange} required value={formData.dueDate}/>                  
                     </div>
                     {/* now how to set cancel or delete? maybe finding the id if exists -> delete if no, cancel */}
                     <button className='border form-bttn' type='button' onClick={handleDelete}>{mode.button1}</button>

@@ -28,8 +28,8 @@ function DraggableTask({ task, openModal }) {
                 <p className='todo-description'>{task.description}</p>                
             </div>
 
-            <div className={`statusTag ${task.status === 'Done' ? 'green' : task.status === 'In-Progress' ? 'yellow' : 'red'}`}>
-                <p>{task.status}</p>
+            <div className={`priorityTag ${task.priority === 'Low' ? 'green' : task.priority === 'Medium' ? 'yellow' : 'red'}`}>
+                <p>{task.priority}</p>
             </div>
             <div className='dateTag'>
                 <p>{formatDate(task.dueDate)}</p>
