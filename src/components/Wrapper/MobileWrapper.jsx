@@ -1,5 +1,6 @@
 import './Wrapper.css';
 import './MobileWrapper.css';
+import loadDummyData from '../../scripts/loadDummyData';
 
 function MobileWrapper({ openModal, setIsFiltersOpen }){
     return(
@@ -11,9 +12,10 @@ function MobileWrapper({ openModal, setIsFiltersOpen }){
 
             <div id='mobile-bottom-wrapper'>
                 <button className='border' onClick={() => setIsFiltersOpen(prev => !prev)}>Filter</button>
+                
                 <button className='border short-btn' onClick={openModal}>New +</button> 
             </div>
-
+            <button className='border' onClick={() => loadDummyData()}>Load Dummy Data</button>
         </div>
 
     )

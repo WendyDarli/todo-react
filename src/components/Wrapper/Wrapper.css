@@ -26,14 +26,25 @@
 }
 
 #bottom-wrapper{
-    width: 312px;
+    /* width: 312px; */
     display: flex;
     justify-content: space-between;
     gap: 9px;
+    
+}
 
 #wrapper button{
     background-color: var(--white);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#bottom-wrapper button:last-of-type{
+    width: fit-content;
+    padding: 0px 10px;
+    margin-left: auto;
+}
+
+#top-wrapper button:last-of-type{
+    max-width: 205px;
+    margin-left: auto;
 }
