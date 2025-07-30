@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import './FiltersDiv.css';
 
+//Renders the filter controls (priority/status).
 function FiltersDiv({ isFiltersOpen, setPriority, setStatus, priority, status }) {
 
   return (

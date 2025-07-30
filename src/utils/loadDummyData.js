@@ -1,3 +1,10 @@
+/**
+ * Removes data from local storage, replaces it with hardcoded default tasks,
+ * and refreshes the page to apply the changes.
+ * 
+ * @returns {void} This function does not return a value.
+ */
+
 export default function loadDummyData(){
     
     const dummyData = [

@@ -1,6 +1,17 @@
 import './Modal.css';
 import { useState } from 'react';
 
+/**
+ * Modal Form that creates a new task or edits it based on mode
+ * @param {Object} props - Component props.
+ * @param {{ title: string, button1: string, button2: string }} props.mode - Controls modal labels and behavior (create or edit).
+ * @param {Object} [props.task] - Optional. Task object to edit. If not provided, form defaults to empty for creating a new task.
+ * @param {Function} props.closeModal - Function to close the modal (usually sets modal state to false).
+ * @param {Function} props.editOrCreateTask - Function that either updates an existing task or adds a new one.
+ * @param {Function} props.deleteTask - Function to delete a task (used when editing).
+ * @returns {JSX.Element} The rendered modal component.
+ */
+
 function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
     const [formData, setformData] = useState({
         id: task?.id || null,
@@ -60,7 +71,7 @@ function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
                         
                             <input aria-label='date' name='dueDate' type='date'min='2023-01-01' max='2030-01-01' onChange={handleInputChange} required value={formData.dueDate}/>                  
                     </div>
-                    {/* now how to set cancel or delete? maybe finding the id if exists -> delete if no, cancel */}
+                    
                     <button className='border form-bttn' type='button' onClick={handleDelete}>{mode.button1}</button>
                     <button className='border form-bttn lilac-bttn' type='submit'>{mode.button2}</button>
                 </form>
