@@ -1,4 +1,4 @@
-//check if 'New +' opens the a form modal
+//check if 'New +' opens the form modal
 import { useState } from 'react';
 import { test, expect } from 'vitest';
 
@@ -9,23 +9,31 @@ import DesktopWrapper from './DesktopWrapper';
 import Modal from '../Create-edit-Modal/Modal';
 
 test('clicking the button opens the form', async() =>{
-    const mockEdit = vi.fn();
+    const mockEditOrCreate = vi.fn();
     const mockDelete = vi.fn();
     const mode = { title: 'New Task', button1: 'Delete', button2: 'Save' };
 
   function TestWrapper() {
     const [showModal, setShowModal] = useState(false);
 
+    function openModal(){
+      setShowModal(true);
+    }
+
+    function closeModal(){
+      setShowModal(false);
+    }
+
     return (
       <>
         <DesktopWrapper
-          openModal={() => setShowModal(true)}
+          openModal={openModal}
         />
         {showModal && (
           <Modal
             mode={mode}
-            closeModal={() => setShowModal(false)}
-            editOrCreateTask={mockEdit}
+            closeModal={closeModal}
+            editOrCreateTask={mockEditOrCreate}
             deleteTask={mockDelete}
           />
         )}
@@ -35,16 +43,14 @@ test('clicking the button opens the form', async() =>{
 
   render(<TestWrapper />);
   
-  expect(screen.queryByTestId('modal-container')).not.toBeInTheDocument();
+  expect(screen.queryByText('New Task')).not.toBeInTheDocument();
 
   // Button click
   const button = screen.getByRole('button', { name: /New \+/i });
   await userEvent.click(button);
 
   // Modal should appear
-  const modal = await screen.findByTestId('modal-container');
-  expect(modal).toBeInTheDocument();
+  const modalTitle = await screen.findByText('New Task');
+  expect(modalTitle).toBeInTheDocument();
   
-
-
 });

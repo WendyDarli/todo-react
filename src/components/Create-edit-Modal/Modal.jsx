@@ -47,7 +47,7 @@ function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
                 closeModal();
             }
         }}>
-            <div id='modal-container'  data-testid="modal-container">
+            <div id='modal-container'>
                 <p>{mode.title}</p>
                 <form onSubmit={handleSubmit} className='form-container'>
                     <input aria-label='type task' name='todoName' type='text' placeholder='Task' required onChange={handleInputChange} value={formData.todoName}/>
