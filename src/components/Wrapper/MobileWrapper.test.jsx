@@ -11,7 +11,7 @@ import Modal from '../Create-edit-Modal/Modal';
 test('clicking the button opens the form', async() => {
     const mockEditOrCreate = vi.fn();
     const mockDelete = vi.fn();
-    const mode = { title: 'New Task', button1: 'Delete', button2: 'Save' };
+    const mode = { title: 'Create Task', button1: 'Cancel', button2: 'Create' };
 
     function TestWrapper() {
         const [showModal, setShowModal] = useState(false);
@@ -41,14 +41,14 @@ test('clicking the button opens the form', async() => {
 
     render(<TestWrapper/>);
 
-    expect(screen.queryByText('New Task')).not.toBeInTheDocument();
+    expect(screen.queryByText('Create Task')).not.toBeInTheDocument();
 
     //button click
     const button = screen.getByRole('button', { name: /New \+/i });
     await userEvent.click(button);
 
     // Modal shoud appear
-    const modalTitle = await screen.findByText('New Task');
+    const modalTitle = await screen.findByText('Create Task');
     expect(modalTitle).toBeInTheDocument();
 
 });

@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 import Modal from './Modal';
 
 let user;
-const mode = { title: 'New Task', button1: 'Delete', button2: 'Save' };
+const mode = { title: 'Create Task', button1: 'Cancel', button2: 'Create' };
 let mockTask;
 let mockDelete;
 let mockClose;
