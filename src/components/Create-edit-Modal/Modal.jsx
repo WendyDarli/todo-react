@@ -55,21 +55,21 @@ function Modal({ mode, task, closeModal, editOrCreateTask, deleteTask }) {
 
                     <div className='selects-container'>
                         
-                        <select name='status' onChange={handleInputChange} required value={formData.status}>
+                        <select name='status' aria-label='status' onChange={handleInputChange} required value={formData.status}>
                             <option value=''>Status</option>
                             <option value='To-Do'>To-Do</option>
                             <option value='In-Progress'>In Progress</option>
                             <option value='Done'>Done</option>
                         </select>
                     
-                        <select name='priority' onChange={handleInputChange} required value={formData.priority}>
+                        <select name='priority' aria-label='priority' onChange={handleInputChange} required value={formData.priority}>
                             <option value=''>Priority</option>
                             <option value='High'>High</option>
                             <option value='Medium'>Medium</option>
                             <option value='Low'>Low</option>
                         </select>
                         
-                            <input aria-label='date' name='dueDate' type='date'min='2023-01-01' max='2030-01-01' onChange={handleInputChange} required value={formData.dueDate}/>                  
+                            <input aria-label='due date' name='dueDate' type='date' min='2023-01-01' max='2030-01-01' onChange={handleInputChange} required value={formData.dueDate}/>                  
                     </div>
                     
                     <button className='border form-bttn' type='button' onClick={handleDelete}>{mode.button1}</button>
