@@ -8,9 +8,9 @@
   --light-gray: #939393;
   --light-lilac: #CBD0EF;
   --darker-lilac: #A1A8D5;
-  --red: #E5C6C6;
-  --yellow: #E3E5C6;
-  --green: #C6E5C8;
+  --red: #ffdede;
+  --yellow: #fdffe3;
+  --green: #e2ffe4;
 
   color: var(--black);
   background-color: var(--white);
