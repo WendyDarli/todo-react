@@ -1,5 +1,12 @@
 # React Todo App
-[Live Demo](https://wendydarli.github.io/todo-react/)
+*Live Demo not available.*
+
+## Tech Stack
+<img alt="JavaScript" height="30" src="https://img.shields.io/badge/JavaScript-00674F?style=for-the-badge&logo=javascript&logoColor=white" /> &nbsp;
+<img alt="React" height="30" src="https://img.shields.io/badge/React-00674F?style=for-the-badge&logo=react&logoColor=white" /> &nbsp;
+<img alt="CSS" height="30" src="https://img.shields.io/badge/CSS-00674F?style=for-the-badge&logo=css&logoColor=white" /> &nbsp;
+
+
 
 ## What it does
 - Creates, edits, and deletes tasks
@@ -16,6 +23,8 @@
 - Using React hooks for data handling
 - Documenting code with JSDoc
 - Deploying a React app with Vite and GitHub Pages
+- Writing component tests using React Testing Library and Vitest
+
 
 ## How to run Localy
 
