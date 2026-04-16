@@ -1,5 +1,5 @@
 # React Todo App
-*Live Demo not available.*
+*Live demo not available. Preview available on my portfolio.*
 
 ## Tech Stack
 <img alt="JavaScript" height="30" src="https://img.shields.io/badge/JavaScript-00674F?style=for-the-badge&logo=javascript&logoColor=white" /> &nbsp;
